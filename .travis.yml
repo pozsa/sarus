@@ -68,5 +68,5 @@ notifications:
   email:
     recipients:
       - taliaga@cscs.ch
-      - mkean@cscs.ch
+      - amadonna@cscs.ch
     on_success: change
