@@ -34,7 +34,7 @@ jobs:
         draft: true
         on:
           repo: eth-cscs/sarus
-          branch: master
+          tags: true
 
     - name: "Test install from source CentOS 7"
       if: branch IN (master, develop, fix-travis)
