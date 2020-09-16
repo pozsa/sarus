@@ -132,6 +132,9 @@ build_sarus_archive() {
     # This way users can read extracting instruction before actually extracting the standalone archive :)
     cp  ${build_dir}/../standalone/README.md ${build_dir}/../README.md
 
+    # Prepare RELEASE notes for CI to use
+    python ${build_dir}/../CI/create_release_notes.py
+
     echo "Successfully built archive"
 }
 

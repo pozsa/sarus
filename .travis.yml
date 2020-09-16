@@ -30,6 +30,7 @@ jobs:
         file:
           - sarus-Release.tar.gz
           - README.md
+        release_notes_file: RELEASE_NOTES.md
         overwrite: true
         draft: true
         on:
