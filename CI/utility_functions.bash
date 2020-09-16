@@ -132,6 +132,7 @@ build_sarus_archive() {
     if [ "${CI}" ] || [ "${TRAVIS}" ]; then
         # Standalone README goes to root directory to be used by CI as root-level deployment artifact
         # This way users can read extracting instruction before actually extracting the standalone archive :)
+        rm -v ${build_dir}/../README.md || true
         cp  ${build_dir}/../standalone/README.md ${build_dir}/../README.md
     fi
     echo "Successfully built archive"
