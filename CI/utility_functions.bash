@@ -128,13 +128,10 @@ build_sarus_archive() {
     cd ${prefix_dir}/.. && tar cz --owner=root --group=root --file=../${archive_name} *
     cp  ${build_dir}/${archive_name} ${build_dir}/../${archive_name}
 
-    # Add standalone's README at the artifacts level
-    if [ "${CI}" ] || [ "${TRAVIS}" ]; then
-        # Standalone README goes to root directory to be used by CI as root-level deployment artifact
-        # This way users can read extracting instruction before actually extracting the standalone archive :)
-        rm -v ${build_dir}/../README.md || true
-        cp  ${build_dir}/../standalone/README.md ${build_dir}/../README.md
-    fi
+    # Standalone README goes to root directory to be used by CI as root-level deployment artifact
+    # This way users can read extracting instruction before actually extracting the standalone archive :)
+    cp  ${build_dir}/../standalone/README.md ${build_dir}/../README.md
+
     echo "Successfully built archive"
 }
 
