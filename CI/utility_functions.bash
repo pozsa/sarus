@@ -136,7 +136,7 @@ build_sarus_archive() {
     fail_on_error "Failed to prepare README.md for Sarus archive"
 
     # Prepare RELEASE notes for CI to use
-    python ${build_dir}/../CI/create_release_notes.py
+    python3 ${build_dir}/../CI/create_release_notes.py
     fail_on_error "Failed to prepare RELEASE_NOTES.md for Sarus archive"
 
     echo "Successfully built Sarus sarchive"
